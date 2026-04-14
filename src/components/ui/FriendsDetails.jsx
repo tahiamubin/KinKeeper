@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../../assets/image/Ellipse 1 (2).png";
 import { MdAddCall, MdOutlineDelete, MdOutlineSnooze } from "react-icons/md";
 import { IoArchiveOutline } from "react-icons/io5";
 import {
@@ -8,41 +7,61 @@ import {
   PhoneIncoming,
   Video,
 } from "lucide-react";
+import { useParams } from "react-router";
+import useFriends from "../hooks/UseFridends";
 
 const FriendsDetails = () => {
+  const { id } = useParams();
+  const { friends } = useFriends();
+  const clickedFriend = friends.find((friend) => friend.id === parseInt(id));
+  const colors = friends.status == "on_track" ? "bg-[#244D3F]" : "bg-[#EFAD44]";
   return (
-    <div className="flex justify-around mx-auto  mb-20">
+    <div className=" flex container mx-auto mb-20 mt-10">
       {/* left */}
 
       <div>
-        <div className="card  w-70 shadow-sm items-center">
+        <div className="card  w-70 shadow-sm items-center p-5">
           <div className="card-body">
-            <img src={image} alt="" />
-            <h2 className="card-title text-4xl font-bold">David Kim</h2>
-            <p className="text-center">62d ago</p>
+            <img src={clickedFriend?.image} alt="" />
+            <h2 className="card-title text-4xl font-bold">
+              {clickedFriend?.name}
+            </h2>
+            <p className="text-center">
+              {clickedFriend?.days_since_contact}d ago
+            </p>
           </div>
-          <div className="flex flex-col gap-2 pb-8 ">
-            <div className="badge badge-soft badge-accent">Accent</div>
-            <div className="badge badge-soft badge-accent">Accent</div>
+          <div className="flex flex-col gap-2 ">
+            <div
+              className="bg-[#CBFADB] text-[#244D3F] 
+          text-center font-semibold rounded-xl"
+            >
+              {clickedFriend?.tags}
+            </div>
+            <div className={`badge  ${colors} text-white`}>
+              {clickedFriend?.status}
+            </div>
           </div>
         </div>
         <div>
           <div className="space-y-2 mt-3">
             <h1
               className="text-xl font-semibold flex items-center
-                         gap-2  p-2 bg-gray-100 rounded-2xl w-70"
+                         gap-2  p-2 bg-white  m-2 rounded-2xl w-70 "
             >
               {" "}
               <MdOutlineSnooze /> Snooze 2 weeks
             </h1>
             <h1
               className="text-xl font-semibold flex items-center gap-2
-                         p-2 bg-gray-100 rounded-2xl w-70"
+                         p-2 bg-white  m-2 rounded-2xl w-70"
             >
               {" "}
               <IoArchiveOutline /> Archive
             </h1>
-            <h1 className="text-xl font-semibold flex items-center gap-2  p-2 bg-gray-100 rounded-2xl w-70 text-red-600">
+            <h1
+              className="text-xl font-semibold flex items-center gap-2 
+             p-2 bg-white  m-2 rounded-2xl w-70 text-red-600"
+            >
               <MdOutlineDelete /> Delete
             </h1>
           </div>
@@ -55,20 +74,30 @@ const FriendsDetails = () => {
         <div className="grid grid-cols-3 mb-10 gap-4">
           <div className="card card-border bg-white  w-80">
             <div className="card-body text-center">
-              <h2 className="text-4xl font-bold text-[#244D3F]">62</h2>
+              <h2 className="text-4xl font-bold text-[#244D3F]">
+                {clickedFriend?.days_since_contact}
+              </h2>
               <p className="text-gray-700">Days Since Contact</p>
             </div>
           </div>
           <div className="card card-border w-80 bg-white">
             <div className="card-body text-center">
-              <h2 className="text-4xl font-bold text-[#244D3F]">30</h2>
+              <h2 className="text-4xl font-bold text-[#244D3F]">
+                {clickedFriend?.goal}
+              </h2>
               <p className="text-gray-700">Goal (Days)</p>
             </div>
           </div>
           <div className="card card-border w-80 bg-white">
             <div className="card-body text-center">
               <h2 className="text-4xl font-bold text-[#244D3F]">
-                Feb 27, 2026
+                <p>
+                  {new Date().toLocaleDateString("en-US", {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                </p>
               </h2>
               <p className="text-gray-700">Next Due</p>
             </div>
@@ -85,7 +114,8 @@ const FriendsDetails = () => {
                 <button className="btn">Edit</button>
               </div>
               <p className="text-xl text-[#244D3F]">
-                Connect every <span className="font-bold">30 days</span>
+                Connect every{" "}
+                <span className="font-bold">{clickedFriend?.goal} days</span>
               </p>
             </div>
           </div>
