@@ -9,6 +9,7 @@ import Timeline from './components/Timeline/Timeline';
 import Status from './components/status/Status';
 import FriendsDetails from './components/ui/FriendsDetails';
 import Friends from './components/friends/Friends';
+import NotFound from './components/Shared/NotFound';
 
 
 
@@ -36,8 +37,9 @@ const router = createBrowserRouter([
        {
         path: "/status",
         element: <Status></Status>
-       },
-    ]
+       },    
+    ],
+    errorElement: <NotFound></NotFound>,
   },
 ]);
 createRoot(document.getElementById('root')).render(
