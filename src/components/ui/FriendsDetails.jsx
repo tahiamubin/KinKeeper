@@ -16,14 +16,14 @@ const FriendsDetails = () => {
   const clickedFriend = friends.find((friend) => friend.id === parseInt(id));
   const colors = friends.status == "on_track" ? "bg-[#244D3F]" : "bg-[#EFAD44]";
   return (
-    <div className=" flex container mx-auto mb-20 mt-10">
+    <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start lg:justify-start container mx-auto mb-20 mt-10">
       {/* left */}
 
       <div>
-        <div className="card  w-70 shadow-sm items-center p-5">
-          <div className="card-body">
+        <div className="card  w-70 shadow-sm  p-2">
+          <div className="card-body">  
             <img src={clickedFriend?.image} alt="" />
-            <h2 className="card-title text-4xl font-bold">
+            <h2 className="card-title text-2xl font-bold text-center">
               {clickedFriend?.name}
             </h2>
             <p className="text-center">
@@ -71,7 +71,7 @@ const FriendsDetails = () => {
       {/* right */}
 
       <div>
-        <div className="grid grid-cols-3 mb-10 gap-4">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2  lg:grid-cols-3 mb-10 gap-4">
           <div className="card card-border bg-white  w-80">
             <div className="card-body text-center">
               <h2 className="text-4xl font-bold text-[#244D3F]">
