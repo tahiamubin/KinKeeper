@@ -6,7 +6,7 @@
     "email": "john@example.com",
     "days_since_contact": 12,
     "status": "overdue",
-    "tags": ["college", "close friend"],
+    "tags": "Family",
     "bio": "Met in university. Love hiking together.",
     "goal": 14,
     "next_due_date": "2025-07-20"
@@ -18,7 +18,7 @@
     "email": "sarah.mitchell@example.com",
     "days_since_contact": 3,
     "status": "on_track",
-    "tags": ["work", "mentor"],
+    "tags": "Work",
     "bio": "My manager at the previous job. Incredibly supportive and wise.",
     "goal": 7,
     "next_due_date": "2025-07-25"
@@ -30,7 +30,7 @@
     "email": "carlos.r@example.com",
     "days_since_contact": 30,
     "status": "overdue",
-    "tags": ["childhood", "family friend"],
+    "tags": "Work",
     "bio": "Grew up on the same street. Haven't talked in a while.",
     "goal": 21,
     "next_due_date": "2025-07-18"
@@ -42,7 +42,7 @@
     "email": "aisha.patel@example.com",
     "days_since_contact": 1,
     "status": "on_track",
-    "tags": ["college", "roommate"],
+    "tags": "Family",
     "bio": "College roommate for 3 years. Now living in London.",
     "goal": 10,
     "next_due_date": "2025-07-30"
@@ -54,7 +54,7 @@
     "email": "tom.nguyen@example.com",
     "days_since_contact": 60,
     "status": "overdue",
-    "tags": ["networking", "industry"],
+    "tags": "Family",
     "bio": "Met at a tech conference in 2022. Works in product design.",
     "goal": 30,
     "next_due_date": "2025-07-10"
@@ -66,7 +66,7 @@
     "email": "emily.chen@example.com",
     "days_since_contact": 5,
     "status": "on_track",
-    "tags": ["work", "close friend"],
+    "tags": "Work",
     "bio": "Coworker turned best friend. We grab coffee every week.",
     "goal": 7,
     "next_due_date": "2025-07-26"
@@ -78,7 +78,7 @@
     "email": "marcus.j@example.com",
     "days_since_contact": 18,
     "status": "overdue",
-    "tags": ["gym", "accountability partner"],
+    "tags": "Family",
     "bio": "Met at the gym. We keep each other motivated.",
     "goal": 14,
     "next_due_date": "2025-07-15"
@@ -90,7 +90,7 @@
     "email": "priya.sharma@example.com",
     "days_since_contact": 9,
     "status": "on_track",
-    "tags": ["family", "cousin"],
+    "tags": "Work",
     "bio": "First cousin. She just had a baby and lives in Toronto.",
     "goal": 14,
     "next_due_date": "2025-07-22"
@@ -102,7 +102,7 @@
     "email": "david.obrien@example.com",
     "days_since_contact": 45,
     "status": "overdue",
-    "tags": ["networking", "investor"],
+    "tags": "Family",
     "bio": "Angel investor I met through a mutual connection. Very insightful.",
     "goal": 30,
     "next_due_date": "2025-07-12"
@@ -114,7 +114,7 @@
     "email": "lena.fischer@example.com",
     "days_since_contact": 2,
     "status": "on_track",
-    "tags": ["travel", "close friend"],
+    "tags": "Work",
     "bio": "Met backpacking through Southeast Asia. Now pen pals for life.",
     "goal": 7,
     "next_due_date": "2025-07-28"
