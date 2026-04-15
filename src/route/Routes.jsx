@@ -5,8 +5,8 @@ import Friends from '../components/friends/Friends';
 import FriendsDetails from '../components/ui/FriendsDetails';
 import Timeline from '../components/Timeline/Timeline';
 import { createBrowserRouter } from 'react-router';
-import Status from '../components/Status/Status';
 import NotFound from '../components/Shared/NotFound';
+import Graph from '../components/graph/Graph';
 
 
 export const router = createBrowserRouter([
@@ -32,8 +32,9 @@ export const router = createBrowserRouter([
        },
        {
         path: "/status",
-        element: <Status></Status>
-       },    
+        element: <Graph></Graph>
+       },
+          
     ],
     errorElement: <NotFound></NotFound>,
   },
