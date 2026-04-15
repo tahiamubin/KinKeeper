@@ -11,7 +11,11 @@ import { Link } from "react-router";
 //     "next_due_date": "2025-07-20"
 
 const FriendsCards = ({ friend }) => {
-  const colors = friend.status == "on_track" ? "bg-[#244D3F]" : "bg-[#EFAD44]";
+  const colors = friend.status === "on_track" 
+  ? "bg-[#244D3F]" 
+  : friend.status === "almost_due" 
+    ? "bg-[#EFAD44]" 
+    : "bg-red-600";
   return (
     <div>
         <Link to={`/friends/${friend.id}`}>

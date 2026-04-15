@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdAddCall, MdOutlineDelete, MdOutlineSnooze } from "react-icons/md";
 import { IoArchiveOutline } from "react-icons/io5";
 import {
@@ -9,19 +9,41 @@ import {
 } from "lucide-react";
 import { useParams } from "react-router";
 import useFriends from "../hooks/UseFridends";
+import { FriendContext } from "../context/FriendContext";
+import { toast } from "react-toastify";
 
 const FriendsDetails = () => {
   const { id } = useParams();
   const { friends } = useFriends();
+  const { timeLine, setTimeline } = useContext(FriendContext);
   const clickedFriend = friends.find((friend) => friend.id === parseInt(id));
-  const colors = friends.status == "on_track" ? "bg-[#244D3F]" : "bg-[#EFAD44]";
+
+  const handleCall = () => {
+    setTimeline([...timeLine, {clickedFriend , type: "Call"}] );
+    toast.success(`You have called ${clickedFriend.name}`);
+  };
+  const handleText = () => {
+    setTimeline([...timeLine, {clickedFriend , type: "Text"}]);
+    toast.success(`You have sent a text to ${clickedFriend.name}`);
+  };
+  const handleVideo = () => {
+    setTimeline([...timeLine, {clickedFriend , type: "Video"}]);
+    toast.success(`You have started a video call with ${clickedFriend.name}`);
+  };
+
+  const colors =
+    clickedFriend?.status === "on_track"
+      ? "bg-[#244D3F]"
+      : clickedFriend?.status === "almost_due"
+        ? "bg-[#EFAD44]"
+        : "bg-red-600";
   return (
     <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start lg:justify-start container mx-auto mb-20 mt-10">
       {/* left */}
 
       <div>
         <div className="card  w-70 shadow-sm  p-2">
-          <div className="card-body">  
+          <div className="card-body">
             <img src={clickedFriend?.image} alt="" />
             <h2 className="card-title text-2xl font-bold text-center">
               {clickedFriend?.name}
@@ -132,24 +154,39 @@ const FriendsDetails = () => {
 
                 {/* box   */}
 
-                <div className="card  bg-base-100 card-xs shadow-sm grid grid-cols-3 gap-4">
-                  <div className="card-body bg-gray-100 items-center p-2 rounded-2xl">
+                <div className="card  bg-base-100  shadow-sm grid grid-cols-3 gap-4">
+                  <div className="btn items-center py-4 px-1 rounded-2xl">
                     <h2 className="card-title">
                       <PhoneIncoming />
                     </h2>
-                    <p className="text-4xl text-[#244D3F]">Call</p>
+                    <p
+                      onClick={handleCall}
+                      className=" btn text-4xl text-[#244D3F]"
+                    >
+                      Call
+                    </p>
                   </div>
-                  <div className="card-body bg-gray-100 items-center p-2 rounded-2xl">
+                  <div className="btn items-center py-4 rounded-2xl">
                     <h2 className="card-title">
                       <MessageSquareMore />
                     </h2>
-                    <p className="text-4xl text-[#244D3F]">Text</p>
+                    <p
+                      onClick={handleText}
+                      className=" text-4xl text-[#244D3F]"
+                    >
+                      Text
+                    </p>
                   </div>
-                  <div className="card-body bg-gray-100 items-center p-2 rounded-2xl">
+                  <div className="btn items-center py-4 px-1 rounded-2xl">
                     <h2 className="card-title">
                       <Video />
                     </h2>
-                    <p className="text-4xl text-[#244D3F]">Video</p>
+                    <p
+                      onClick={handleVideo}
+                      className=" text-4xl text-[#244D3F]"
+                    >
+                      Video
+                    </p>
                   </div>
                 </div>
               </div>
@@ -196,7 +233,7 @@ const FriendsDetails = () => {
                             Meetup
                           </h1>
                           <p className="text-gray-600 font-semibold">
-                            Industry conference meetupe
+                            Industry conference meetup
                           </p>
                         </div>
                       </div>
