@@ -19,15 +19,15 @@ const FriendsDetails = () => {
   const clickedFriend = friends.find((friend) => friend.id === parseInt(id));
 
   const handleCall = () => {
-    setTimeline([...timeLine, {clickedFriend , type: "Call"}] );
+    setTimeline([...timeLine, {...clickedFriend , type: "Call"}] );
     toast.success(`You have called ${clickedFriend.name}`);
   };
   const handleText = () => {
-    setTimeline([...timeLine, {clickedFriend , type: "Text"}]);
+    setTimeline([...timeLine, {...clickedFriend , type: "Text"}]);
     toast.success(`You have sent a text to ${clickedFriend.name}`);
   };
   const handleVideo = () => {
-    setTimeline([...timeLine, {clickedFriend , type: "Video"}]);
+    setTimeline([...timeLine, {...clickedFriend , type: "Video"}]);
     toast.success(`You have started a video call with ${clickedFriend.name}`);
   };
 
@@ -43,6 +43,7 @@ const FriendsDetails = () => {
 
       <div>
         <div className="card  w-70 shadow-sm  p-2">
+          
           <div className="card-body">
             <img src={clickedFriend?.image} alt="" />
             <h2 className="card-title text-2xl font-bold text-center">
@@ -155,13 +156,13 @@ const FriendsDetails = () => {
                 {/* box   */}
 
                 <div className="card  bg-base-100  shadow-sm grid grid-cols-3 gap-4">
-                  <div className="btn items-center py-4 px-1 rounded-2xl">
+                  <div className="btn items-center p-4 px-1 rounded-2xl">
                     <h2 className="card-title">
                       <PhoneIncoming />
                     </h2>
                     <p
                       onClick={handleCall}
-                      className=" btn text-4xl text-[#244D3F]"
+                      className=" btn text-2xl text-[#244D3F]"
                     >
                       Call
                     </p>
@@ -172,7 +173,7 @@ const FriendsDetails = () => {
                     </h2>
                     <p
                       onClick={handleText}
-                      className=" text-4xl text-[#244D3F]"
+                      className=" text-2xl text-[#244D3F]"
                     >
                       Text
                     </p>
@@ -183,7 +184,7 @@ const FriendsDetails = () => {
                     </h2>
                     <p
                       onClick={handleVideo}
-                      className=" text-4xl text-[#244D3F]"
+                      className=" text-2xl text-[#244D3F]"
                     >
                       Video
                     </p>
@@ -205,8 +206,8 @@ const FriendsDetails = () => {
                 <div className="card w-full bg-base-100 card-xs shadow-sm">
                   <div className="card-body">
                     <div className="space-y-2.5">
-                      <div class="flex items-center justify-between ">
-                        <div class="flex items-center gap-3">
+                      <div className="flex items-center justify-between ">
+                        <div className="flex items-center gap-3">
                           <div>
                             <h1>
                               <MessageSquareMore />
@@ -219,12 +220,12 @@ const FriendsDetails = () => {
                             </p>
                           </div>
                         </div>
-                        <span class="text-sm text-gray-500">Jan 28, 2026</span>
+                        <span className="text-sm text-gray-500">Jan 28, 2026</span>
                       </div>
                     </div>
 
-                    <div class="flex items-center justify-between ">
-                      <div class="flex items-center gap-3">
+                    <div className="flex items-center justify-between ">
+                      <div className="flex items-center gap-3">
                         <div>
                           <h1>
                             <PhoneForwarded />
@@ -237,12 +238,12 @@ const FriendsDetails = () => {
                           </p>
                         </div>
                       </div>
-                      <span class="text-sm text-gray-500">Jan 28, 2026</span>
+                      <span className="text-sm text-gray-500">Jan 28, 2026</span>
                     </div>
 
                     <div>
-                      <div class="flex items-center justify-between ">
-                        <div class="flex items-center gap-3">
+                      <div className="flex items-center justify-between ">
+                        <div className="flex items-center gap-3">
                           <div>
                             <h1>
                               <Video />
@@ -255,7 +256,7 @@ const FriendsDetails = () => {
                             </p>
                           </div>
                         </div>
-                        <span class="text-sm text-gray-500">Jan 28, 2026</span>
+                        <span className="text-sm text-gray-500">Jan 28, 2026</span>
                       </div>
                     </div>
                   </div>

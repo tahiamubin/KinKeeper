@@ -5,9 +5,21 @@ import { FriendContext } from "../context/FriendContext";
 const Graph = () => {
   const { timeLine } = useContext(FriendContext);
   const data = [
-    { name: "Text", value: timeLine.filter ((item) => item.type == "Text").length, fill: "#7E35E1" },
-    { name: "Call", value: timeLine.filter ((item) => item.type == "Call").length, fill: "#244D3F" },
-    { name: "Video", value: timeLine.filter ((item) => item.type == "Video").length, fill: "#37A163" },
+    {
+      name: "Text",
+      value: timeLine.filter((item) => item.type == "Text").length,
+      fill: "#7E35E1",
+    },
+    {
+      name: "Call",
+      value: timeLine.filter((item) => item.type == "Call").length,
+      fill: "#244D3F",
+    },
+    {
+      name: "Video",
+      value: timeLine.filter((item) => item.type == "Video").length,
+      fill: "#37A163",
+    },
   ];
   return (
     <div className="container mx-auto">
