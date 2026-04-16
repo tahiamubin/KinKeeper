@@ -37,15 +37,16 @@ const FriendsDetails = () => {
       : clickedFriend?.status === "almost_due"
         ? "bg-[#EFAD44]"
         : "bg-red-600";
+
   return (
     <div className="flex flex-col items-center justify-center lg:flex-row lg:items-start lg:justify-start container mx-auto mb-20 mt-10">
       {/* left */}
 
       <div>
         <div className="card  w-70 shadow-sm  p-2">
-          
+           
           <div className="card-body">
-            <img src={clickedFriend?.image} alt="" />
+            <img className="w-[270 px]" src={clickedFriend?.picture} alt="" />
             <h2 className="card-title text-2xl font-bold text-center">
               {clickedFriend?.name}
             </h2>

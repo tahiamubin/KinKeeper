@@ -12,7 +12,8 @@ const Friends = () => {
     const { friends, loading } = useFriends();
     return (
         <div>
-            {loading && <div className="items-center justify-center mx-auto"> <ClimbingBoxLoader color="#244D3F" /> </div>}
+            {loading && <div className="flex justify-center"> <ClimbingBoxLoader  color="#244D3F" /> 
+            </div>}
       
       <div className="grid sm:grid-cols-1 items-center justify-center   md:grid-cols-2  lg:grid-cols-4  ">
         {friends.map((friend, index) => (
