@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "John Doe",
-    "picture": "/src/assets/image/Ellipse 1 (1).png",
+    "picture": "image/Ellipse 1 (1).png",
     "email": "john@example.com",
     "days_since_contact": 12,
     "status": "overdue",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Sarah Mitchell",
-    "picture": "/src/assets/image/Ellipse 1 (2).png",
+    "picture": "/image/Ellipse 1 (2).png",
     "email": "sarah.mitchell@example.com",
     "days_since_contact": 3,
     "status": "on_track",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Carlos Rivera",
-    "picture": "/src/assets/image/Ellipse 1 (3).png",
+    "picture": "/image/Ellipse 1 (3).png",
     "email": "carlos.r@example.com",
     "days_since_contact": 30,
     "status": "almost_due",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Aisha Patel",
-    "picture": "/src/assets/image/Ellipse 1 (4).png",
+    "picture": "/image/Ellipse 1 (4).png",
     "email": "aisha.patel@example.com",
     "days_since_contact": 1,
     "status": "on_track",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "Tom Nguyen",
-    "picture": "/src/assets/image/Ellipse 1 (5).png",
+    "picture": "/image/Ellipse 1 (5).png",
     "email": "tom.nguyen@example.com",
     "days_since_contact": 60,
     "status": "almost_due",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Emily Chen",
-    "picture": "/src/assets/image/Ellipse 1 (6).png",
+    "picture": "/image/Ellipse 1 (6).png",
     "email": "emily.chen@example.com",
     "days_since_contact": 5,
     "status": "on_track",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Marcus Johnson",
-    "picture": "/src/assets/image/Ellipse 1 (7).png",
+    "picture": "/image/Ellipse 1 (7).png",
     "email": "marcus.j@example.com",
     "days_since_contact": 18,
     "status": "overdue",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Priya Sharma",
-    "picture": "/src/assets/image/Ellipse 1 (8).png",
+    "picture": "/image/Ellipse 1 (8).png",
     "email": "priya.sharma@example.com",
     "days_since_contact": 9,
     "status": "on_track",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "David O'Brien",
-    "picture": "/src/assets/image/Ellipse 1 (9).png",
+    "picture": "/image/Ellipse 1 (9).png",
     "email": "david.obrien@example.com",
     "days_since_contact": 45,
     "status": "overdue",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Lena Fischer",
-    "picture": "/src/assets/image/Ellipse 1 (10).png",
+    "picture": "/image/Ellipse 1 (10).png",
     "email": "lena.fischer@example.com",
     "days_since_contact": 2,
     "status": "almost_due",
