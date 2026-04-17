@@ -1,16 +1,14 @@
-# React + Vite
+Project Name: 
+KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Short Description
+A responsive web app that helps you stay in touch with your friends by tracking your last contact date, logging interactions like calls, texts, and video chats, and visualizing your friendship activity through timelines and analytics.
 
-Currently, two official plugins are available:
+Technologies Used
+React, React Router, Recharts, Tailwind CSS, and toast notification library.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+3 Key Features
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Friend Management Dashboard — View all your friends as cards on the home page, each showing their photo, name, tags, days since last contact, and a color-coded status. Click any card to visit a detailed profile page with quick check-in actions.
+Interaction Timeline — Every time you log a Call, Text, or Video check-in from a friend's detail page, it's automatically recorded with the date and interaction type on a dedicated Timeline page — with filter options to sort by interaction type.
+Friendship Analytics — A dedicated Stats page with a Pie Chart (built using Recharts) that visually breaks down all your logged interactions by type (Call / Text / Video), giving you an overview of how you're staying connected.
