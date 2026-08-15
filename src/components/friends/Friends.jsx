@@ -1,5 +1,5 @@
 import React from 'react';
-import useFriends from '../hooks/UseFridends';
+import useFriends from '../hooks/useFriends';
 import FriendsCards from '../ui/FriendsCards';
 
 import FriendsDetails from "../ui/FriendsDetails";
