@@ -8,9 +8,10 @@ import {
   Video,
 } from "lucide-react";
 import { useParams } from "react-router";
-import useFriends from "../hooks/UseFridends";
+
 import { FriendContext } from "../context/FriendContext";
 import { toast } from "react-toastify";
+import useFriends from "../hooks/useFridends";
 
 const FriendsDetails = () => {
   const { id } = useParams();

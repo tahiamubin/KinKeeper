@@ -1,5 +1,5 @@
 import React from 'react';
-import useFriends from '../hooks/useFriends';
+
 import FriendsCards from '../ui/FriendsCards';
 
 import FriendsDetails from "../ui/FriendsDetails";
@@ -7,6 +7,7 @@ import Timeline from "../Timeline/Timeline";
 
 import { Dice1 } from "lucide-react";
 import { ClimbingBoxLoader } from "react-spinners";
+import useFriends from '../hooks/useFridends';
 
 const Friends = () => {
     const { friends, loading } = useFriends();
